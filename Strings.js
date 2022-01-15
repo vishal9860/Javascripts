@@ -1,7 +1,7 @@
 //  String Tutorial 
 //1) Javascript Strings Are Immutable we cannot change the content inside The String if you changes then new String object Will Be Craeted 
 
-var readlineSync = require('readline-sync');
+// var readlineSync = require('readline-sync');
 let str="VISHAL";
 // let str=new String("VISHAL");
 console.log(str);
@@ -55,7 +55,7 @@ if(str.includes("ISHAL")){
 }
 
 
-// Check  a particular String Start and End with A particular String
+//Check  a particular String Start and End with A particular String
 
 if(str.startsWith("VI"))
 {
@@ -72,12 +72,12 @@ if(str.endsWith("AL"))
 }
 
 
-//Extracting a substring from a string
-//You can extract a substring from a string using the slice() method. You pass it:
-//str="VISHAL";
-console.log(str.slice(1,3));//not including end Index
-//The character at index 1 is "I", and the character at index 3 is "H". So we extract all characters starting at "I" and ending just before "H", giving us "IS".
-//Changing case
+// Extracting a substring from a string
+// You can extract a substring from a string using the slice() method. You pass it:
+// str="VISHAL";
+// console.log(str.slice(1,3));//not including end Index
+// The character at index 1 is "I", and the character at index 3 is "H". So we extract all characters starting at "I" and ending just before "H", giving us "IS".
+// Changing case
 // The string methods toLowerCase() and toUpperCase() take a string and convert all the characters to lower- or uppercase, respectively. This can be useful for example if you want to normalize all user-entered data before storing it in a database.
 
 // Let's try entering the following lines to see what happens:
@@ -152,3 +152,88 @@ const first="vishal";
 const second="jare";
 const third=first.concat(" "+second);
 console.log(third);
+
+
+let noOfWords=(param)=>{
+let count=0;
+for(let i=0;i<param.length;i++)
+{
+    if(param.charAt(i)==" ")
+    {
+        count=count+1;
+    }
+}
+return count+1;
+}
+let letters=noOfWords("We are neoGrammers");
+console.log(letters);
+let noOfWords=(param)=>{
+let count=0;
+for(let i=0;i<param.length;i++)
+{
+    if(param.charAt(i)==" ")
+    {
+        count=count+1;
+    }
+}
+return count+1;
+}
+let letters=noOfWords("We are neoGrammers");
+console.log(letters);
+
+//1 )Write a program that converts the string into uppercase
+console.log("vishal".toLocaleUpperCase());
+//2)Write a program that reads two strings and append first string to the second.
+// So if first string is Good second string is Morning , the program should print MorningGood
+
+let append = (param1, param2) => {
+    return param1 + param2;
+}
+let sente = append("vishal", "Jare");
+
+//3)Program that reads string and count number of characters present in the string
+
+let countStrings = (param) => {
+    let count = 0;
+    for (let i = 0; i < param.length; i++) {
+        count++;
+    }
+    return count;
+}
+console.log(countStrings("Vishal"));
+
+// 4)Write a program that converts string like "124" to 124
+let conversion = (param) => {
+    return Number(param);
+}
+
+console.log(conversion("123"));
+
+//5)Write a program to delete all vowels from a string. Assume string is not more than 80 characters long
+let removeVowel = (str) => {
+    if (str === " ") {
+        return "String does not contain Character";
+    }
+    else {
+        let arr = str.split("");
+        return arr.filter((str) => {
+            if (str === 'a' || str === 'e' || str === 'i' || str === 'o' || str === 'u' || str === 'e') {
+                return false;
+            }
+            else {
+                return true;
+            }
+        })
+
+    }
+
+}
+let result=removeVowel("Vishal");
+console.log(result.toString());
+// function fill(ele)
+// {
+//        return ele%2===0?true:false;
+// }
+// let arr=[2,3,4,5,6,7,8];
+// let result=arr.filter(fill);
+// console.log(result);
