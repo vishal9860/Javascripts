@@ -1,5 +1,13 @@
 {
   "files": {
+    ".breakpoints": [
+      {
+        "id": "4d1b04f8-f3fe-4a1b-b8f5-8a7b84bc617a",
+        "line": 5,
+        "version": 1,
+        "index": 49
+      }
+    ],
     "index.js": [
       {
         "id": "9d061d56-8c16-49c8-ab5b-42474cef3c6e",
