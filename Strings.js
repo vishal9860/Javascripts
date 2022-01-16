@@ -225,3 +225,53 @@ console.log(result.toString());
 // let arr=[2,3,4,5,6,7,8];
 // let result=arr.filter(fill);
 // console.log(result);
+
+
+// 7) A program that reads three strings and prints the longest and smallest one
+let smallAndLong = (...args) => {
+    let arr = [];
+    let a=args.reduce((acc, curr) => {
+        return acc.length <curr.length ? acc : curr;
+    });
+    let b=args.reduce((acc, curr) => {
+        return acc.length > curr.length ? acc : curr;
+    });
+    arr.push(a);
+    arr.push(b);
+
+    return arr;
+}
+let [small, long] = smallAndLong("vishal", "ChandraKant", "SadaShiv");
+console.log(`${small},${long}`);
+
+//9)Write a program which receives a string str that calculates the length of a string and 
+//return true if the length is greater than 7 without using strlen()
+ function Str(param){
+         let length=0;
+         for(let i=0;i<param.length;i++){
+            length++;
+         }
+         if(length>7)
+         {
+             return `${param} length is Greater Than 7`
+         }
+         else{
+            return `${param} length is less  Than 7`
+        }
+ }
+ let longOrSmall=Str("VishalJare");
+ console.log(longOrSmall);
+
+ //10)Write a program that takes two strings and copies smaller string into bigger string
+
+ 
+ let mixed=(param1,param2)=>{
+       if(param1.length<param2.length)
+       {
+           return param2.concat(param1);
+       }
+       else{
+           return param1.concat(param2);
+       }
+ }
+ console.log(mixed("jare","vishal"));
